@@ -74,7 +74,7 @@ ggplot(Total_Steps, aes(x = steps)) +
 
     ## Warning: Removed 8 rows containing non-finite values (stat_bin).
 
-![](https://github.com/ahmetozsari/RepData_PeerAssessment1/unnamed-chunk-4-1.png)
+![](https://github.com/ahmetozsari/RepData_PeerAssessment1/blob/master/unnamed-chunk-4-1.png)
 
 1.  Calculate and report the mean and median of the total number of steps taken per day
 
@@ -96,7 +96,7 @@ IntervalDT <- activityDT[, c(lapply(.SD, mean, na.rm = TRUE)), .SDcols = c("step
 ggplot(IntervalDT, aes(x = interval , y = steps)) + geom_line(color="blue", size=1) + labs(title = "Avg. Daily Steps", x = "Interval", y = "Avg. Steps per day")
 ```
 
-![](https://github.com/ahmetozsari/RepData_PeerAssessment1/unnamed-chunk-6-1.png)
+![](https://github.com/ahmetozsari/RepData_PeerAssessment1/blob/master/unnamed-chunk-6-1.png)
 
 1.  Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 
@@ -155,7 +155,7 @@ Total_Steps[, .(Mean_Steps = mean(steps), Median_Steps = median(steps))]
 ggplot(Total_Steps, aes(x = steps)) + geom_histogram(fill = "blue", binwidth = 1000) + labs(title = "Daily Steps", x = "Steps", y = "Frequency")
 ```
 
-![](https://github.com/ahmetozsari/RepData_PeerAssessment1/unnamed-chunk-11-1.png)
+![](https://github.com/ahmetozsari/RepData_PeerAssessment1/blob/master/unnamed-chunk-11-1.png)
 
 | Type of Estimate                       | Mean\_Steps | Median\_Steps |
 |----------------------------------------|-------------|---------------|
